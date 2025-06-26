@@ -92,5 +92,9 @@ namespace DataAccessLayer
         {
             return employees.FirstOrDefault(e => e.EmployeeID == employeeId);
         }
+        public Employees Login(string userName, string password)
+        {
+            return employees.FirstOrDefault(e => e.UserName == userName && e.Password == password);
+        }
     }
 }

@@ -15,5 +15,6 @@ namespace Repository.Interface
         public bool UpdateOrder(Orders orders);
         public bool SaveOrder(Orders orders);
         public Orders GetOrderById(int orderId);
+        public List<Orders> GetOrdersByCustomerId(int customerId);
     }
 }

@@ -12,6 +12,7 @@ namespace Repository
     public class EmployeesRepository : IEmployeesRepository
     {
         EmployeesDAO employeesDAO = new EmployeesDAO();
+
         public bool DeleteEmployee(Employees employees)
         {
             return employeesDAO.DeleteEmployee(employees);
@@ -40,6 +41,10 @@ namespace Repository
         public bool UpdateEmployee(Employees employees)
         {
             return employeesDAO.UpdateEmployee(employees);
+        }
+        public Employees Login(string userName, string password)
+        {
+            return employeesDAO.Login(userName, password);
         }
     }
 }

@@ -1,0 +1,27 @@
+﻿<Window x:Class="DoQuocBaoWPF.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DoQuocBaoWPF"
+        mc:Ignorable="d"
+        Title="Login" Height="450" Width="800">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="44,85,0,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="44,59,0,0" TextWrapping="Wrap" Text="Admin" VerticalAlignment="Top" FontSize="16" Foreground="Red"/>
+        <TextBox x:Name="txtUserName" HorizontalAlignment="Left" Margin="132,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="471"/>
+        <TextBlock HorizontalAlignment="Left" Margin="44,120,0,0" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="44,201,0,0" TextWrapping="Wrap" Text="Customer" VerticalAlignment="Top" FontSize="16" Foreground="Red"/>
+        <TextBlock HorizontalAlignment="Left" Margin="44,227,0,0" TextWrapping="Wrap" Text="Phone Number:" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="txtPhone" HorizontalAlignment="Left" Margin="160,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="443"/>
+        <Button x:Name="btnAdminLogin" Content="Login" HorizontalAlignment="Left" Margin="278,158,0,0" VerticalAlignment="Top" Height="31" Width="62" Click="btnAdminLogin_Click"/>
+        <Button x:Name="btnCustomerLogin" Content="Login" HorizontalAlignment="Left" Margin="278,264,0,0" VerticalAlignment="Top" Height="31" Width="62" Click="btnCustomerLogin_Click"/>
+        <Label Content="Login" HorizontalAlignment="Left" Margin="347,10,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="132,123,0,0" VerticalAlignment="Top" Width="120" />
+
+
+
+
+
+    </Grid>
+</Window>

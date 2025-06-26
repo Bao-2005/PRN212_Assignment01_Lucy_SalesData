@@ -1,0 +1,31 @@
+﻿<Window x:Class="DoQuocBaoWPF.ProductWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DoQuocBaoWPF"
+        mc:Ignorable="d"
+        Title="ProductWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="ProductID" Margin="21,19,703,384" RenderTransformOrigin="0.526,0.852"/>
+        <Label Content="ProductName" Margin="21,50,669,353" RenderTransformOrigin="0.497,0.22"/>
+        <Label Content="SupplierID" Margin="21,81,679,322"/>
+        <Label Content="CategoryID" Margin="21,112,679,291"/>
+        <Label Content="QuantityPerUnit" Margin="21,144,679,259"/>
+        <Label Content="UnitPrice" Margin="21,175,679,228"/>
+        <Label Content="UnitsInStock" Margin="21,207,679,196"/>
+        <Label Content="UnitsOnOrder" Margin="21,239,679,164"/>
+        <Label Content="ReorderLevel" Margin="21,272,679,131"/>
+
+        <TextBlock x:Name="txtProductID" HorizontalAlignment="Left" Margin="160,25,0,0" TextWrapping="Wrap" Text="ID" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtProductName" HorizontalAlignment="Left" Margin="160,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="531"/>
+        <TextBox x:Name="txtSupplierID" HorizontalAlignment="Left" Margin="160,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="531"/>
+        <TextBox x:Name="txtCategoryID" HorizontalAlignment="Left" Margin="160,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="531"/>
+        <TextBox x:Name="txtQuantityPerUnit" HorizontalAlignment="Left" Margin="160,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="531"/>
+        <TextBox x:Name="txtUnitPrice" HorizontalAlignment="Left" Margin="160,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="531"/>
+        <TextBox x:Name="txtUnitsInStock" HorizontalAlignment="Left" Margin="160,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="531"/>
+        <TextBox x:Name="txtUnitsOnOrder" HorizontalAlignment="Left" Margin="160,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="531"/>
+        <TextBox x:Name="txtReorderLevel" HorizontalAlignment="Left" Margin="160,276,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="531"/>
+        <CheckBox x:Name="chkDiscontinued" Content="Discontinued" HorizontalAlignment="Left" Margin="160,310,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

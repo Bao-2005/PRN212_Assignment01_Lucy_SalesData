@@ -27,7 +27,7 @@ namespace Repository
             return customersDAO.GetAllCustomers();
         }
 
-        public Customers GetCustomerById(string customerId)
+        public Customers GetCustomerById(int customerId)
         {
             return customersDAO.GetCustomerById(customerId);
         }
@@ -40,6 +40,10 @@ namespace Repository
         public bool UpdateCustomer(Customers customers)
         {
             return customersDAO.UpdateCustomer(customers);
+        }
+        public Customers GetCustomerByPhoneNumber(string phoneNumber)
+        {
+            return customersDAO.GetCustomerByPhoneNumber(phoneNumber);
         }
     }
 }

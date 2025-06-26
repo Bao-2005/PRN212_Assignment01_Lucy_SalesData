@@ -42,5 +42,9 @@ namespace Repository
         {
             return ordersDAO.UpdateOrder(orders);
         }
+        public List<Orders> GetOrdersByCustomerId(int customerId)
+        {
+            return ordersDAO.GetOrdersByCustomerId(customerId);
+        }
     }
 }

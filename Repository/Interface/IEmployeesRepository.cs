@@ -15,5 +15,6 @@ namespace Repository.Interface
         public bool UpdateEmployee(Employees employees);
         public bool SaveEmployee(Employees employees);
         public Employees GetEmployeeById(int employeeId);
+        public Employees Login(string userName, string password);
     }
 }

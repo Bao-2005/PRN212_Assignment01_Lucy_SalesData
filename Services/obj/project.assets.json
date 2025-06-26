@@ -24,6 +24,20 @@
         "runtime": {
           "bin/placeholder/DataAccessLayer.dll": {}
         }
+      },
+      "Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "BusinessObject": "1.0.0",
+          "DataAccessLayer": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Repository.dll": {}
+        }
       }
     }
   },
@@ -37,12 +51,17 @@
       "type": "project",
       "path": "../DataAccessLayer/DataAccessLayer.csproj",
       "msbuildProject": "../DataAccessLayer/DataAccessLayer.csproj"
+    },
+    "Repository/1.0.0": {
+      "type": "project",
+      "path": "../Repository/Repository.csproj",
+      "msbuildProject": "../Repository/Repository.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
       "BusinessObject >= 1.0.0",
-      "DataAccessLayer >= 1.0.0"
+      "Repository >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -80,8 +99,8 @@
             "D:\\Class\\SU25\\PRN212\\Code\\Assignment_1\\BusinessObject\\BusinessObject.csproj": {
               "projectPath": "D:\\Class\\SU25\\PRN212\\Code\\Assignment_1\\BusinessObject\\BusinessObject.csproj"
             },
-            "D:\\Class\\SU25\\PRN212\\Code\\Assignment_1\\DataAccessLayer\\DataAccessLayer.csproj": {
-              "projectPath": "D:\\Class\\SU25\\PRN212\\Code\\Assignment_1\\DataAccessLayer\\DataAccessLayer.csproj"
+            "D:\\Class\\SU25\\PRN212\\Code\\Assignment_1\\Repository\\Repository.csproj": {
+              "projectPath": "D:\\Class\\SU25\\PRN212\\Code\\Assignment_1\\Repository\\Repository.csproj"
             }
           }
         }

@@ -48,8 +48,9 @@ namespace DataAccessLayer
         }
         public bool DeleteCustomer(Customers customer)
         {
-            var existingCustomer = customers.FirstOrDefault(c => c.CustomerID == customer.CustomerID);
-            if(existingCustomer != null)
+            var id = customer.CustomerID;
+            var existingCustomer = customers.FirstOrDefault(c => c.CustomerID == id);
+            if (existingCustomer != null)
             {
                 customers.Remove(existingCustomer);
                 return true;
@@ -77,11 +78,24 @@ namespace DataAccessLayer
             {
                 return false;
             }
+            if (customers.Count <= 0)
+            {
+                customer.CustomerID = 1;
+            }
+            else
+            {
+                customer.CustomerID = customers.Max(c => c.CustomerID) + 1;
+            }
+            customers.Add(customer);
             return true;
         }
-        public Customers GetCustomerById(string customerId)
+        public Customers GetCustomerById(int customerId)
         {
-            return customers.FirstOrDefault(c => c.CustomerID.ToString() == customerId);
+            return customers.FirstOrDefault(c => c.CustomerID == customerId);
+        }
+        public Customers GetCustomerByPhoneNumber(string phoneNumber)
+        {
+            return customers.FirstOrDefault(c => c.Phone == phoneNumber);
         }
     }
 }

@@ -25,12 +25,26 @@
           "bin/placeholder/DataAccessLayer.dll": {}
         }
       },
-      "Services/1.0.0": {
+      "Repository/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
           "BusinessObject": "1.0.0",
           "DataAccessLayer": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Repository.dll": {}
+        }
+      },
+      "Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "BusinessObject": "1.0.0",
+          "Repository": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Services.dll": {}
@@ -52,6 +66,11 @@
       "path": "../DataAccessLayer/DataAccessLayer.csproj",
       "msbuildProject": "../DataAccessLayer/DataAccessLayer.csproj"
     },
+    "Repository/1.0.0": {
+      "type": "project",
+      "path": "../Repository/Repository.csproj",
+      "msbuildProject": "../Repository/Repository.csproj"
+    },
     "Services/1.0.0": {
       "type": "project",
       "path": "../Services/Services.csproj",
@@ -71,9 +90,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Class\\SU25\\PRN212\\Code\\Assignment_1\\WpfApp\\WpfApp.csproj",
-      "projectName": "WpfApp",
-      "projectPath": "D:\\Class\\SU25\\PRN212\\Code\\Assignment_1\\WpfApp\\WpfApp.csproj",
+      "projectUniqueName": "D:\\Class\\SU25\\PRN212\\Code\\Assignment_1\\WpfApp\\DoQuocBaoWPF.csproj",
+      "projectName": "DoQuocBaoWPF",
+      "projectPath": "D:\\Class\\SU25\\PRN212\\Code\\Assignment_1\\WpfApp\\DoQuocBaoWPF.csproj",
       "packagesPath": "C:\\Users\\Quoc Bao\\.nuget\\packages\\",
       "outputPath": "D:\\Class\\SU25\\PRN212\\Code\\Assignment_1\\WpfApp\\obj\\",
       "projectStyle": "PackageReference",

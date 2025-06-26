@@ -12,20 +12,12 @@ namespace DataAccessLayer
         static List<OrderDetails> orderDetails = new List<OrderDetails>();
         public void GenerateSampleDataSet()
         {
-            orderDetails.Add(new OrderDetails
-            {
-                OrderID = 1,
-                ProductID = 101,
-                UnitPrice = 150000m,
-                Quantity = 2,
-                Discount = 0.05f
-            });
 
             orderDetails.Add(new OrderDetails
             {
                 OrderID = 1,
                 ProductID = 102,
-                UnitPrice = 95000m,
+                UnitPrice = 95000,
                 Quantity = 1,
                 Discount = 0.0f
             });
@@ -34,7 +26,7 @@ namespace DataAccessLayer
             {
                 OrderID = 2,
                 ProductID = 103,
-                UnitPrice = 220000m,
+                UnitPrice = 220000,
                 Quantity = 3,
                 Discount = 0.10f
             });
@@ -42,8 +34,8 @@ namespace DataAccessLayer
             orderDetails.Add(new OrderDetails
             {
                 OrderID = 3,
-                ProductID = 104,
-                UnitPrice = 300000m,
+                ProductID = 101,
+                UnitPrice = 300000,
                 Quantity = 1,
                 Discount = 0.15f
             });
@@ -82,7 +74,15 @@ namespace DataAccessLayer
             var existingOrderDetail = orderDetails.FirstOrDefault(od => od.OrderID == orderDetail.OrderID);
             if (existingOrderDetail == null)
             {
-                orderDetails.Add(orderDetail);
+                if (orderDetails.Count <= 0)
+                {
+                    orderDetail.OrderID = 1;
+                }
+                else
+                {
+                    orderDetail.OrderID = orderDetails.Max(od => od.OrderID) + 1;
+                }
+                    orderDetails.Add(orderDetail);
                 return true;
             }
             return false;

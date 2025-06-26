@@ -14,6 +14,7 @@ namespace Repository.Interface
         public bool DeleteCustomer(Customers customers);
         public bool UpdateCustomer(Customers customers);
         public bool SaveCustomer(Customers customers);
-        public Customers GetCustomerById(string customerId);
+        public Customers GetCustomerById(int customerId);
+        public Customers GetCustomerByPhoneNumber(string phoneNumber);
     }
 }

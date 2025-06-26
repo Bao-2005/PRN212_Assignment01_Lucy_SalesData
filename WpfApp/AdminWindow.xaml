@@ -1,0 +1,16 @@
+﻿<Window x:Class="DoQuocBaoWPF.AdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DoQuocBaoWPF"
+        mc:Ignorable="d"
+        Title="AdminWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="Admin" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Background="White" Foreground="Red" FontSize="24"/>
+        <Button x:Name="btn_CustomerManagement" Content="Customer Management" HorizontalAlignment="Left" Margin="48,92,0,0" VerticalAlignment="Top" Height="40" Width="255" FontSize="16" Click="btn_CustomerManagement_Click"/>
+        <Button x:Name="btn_ProductManagement" Content="Product Management" HorizontalAlignment="Left" Margin="48,177,0,0" VerticalAlignment="Top" Height="40" Width="255" FontSize="16" Click="btn_ProductManagement_Click"/>
+        <Button x:Name="btn_OrderManagement" Content="Order Management" HorizontalAlignment="Left" Margin="48,264,0,0" VerticalAlignment="Top" Height="40" Width="255" FontSize="16" Click="btn_OrderManagement_Click"/>
+
+    </Grid>
+</Window>

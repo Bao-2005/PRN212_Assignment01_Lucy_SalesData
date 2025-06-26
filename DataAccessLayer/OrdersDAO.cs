@@ -38,7 +38,8 @@ namespace DataAccessLayer
         }
         public List<Orders> GetAllOrders()
         {
-            return orders;
+            var sortedOrders = orders.OrderByDescending(o => o.OrderDate).ToList();
+            return sortedOrders;
         }
         public bool DeleteOrder(Orders order)
         {
@@ -67,6 +68,14 @@ namespace DataAccessLayer
             var existingOrder = orders.FirstOrDefault(o => o.OrderID == order.OrderID);
             if (existingOrder == null)
             {
+                if (orders.Count <= 0)
+                {
+                    order.OrderID = 1;
+                }
+                else
+                {
+                    order.OrderID = orders.Max(o => o.OrderID) + 1;
+                }
                 orders.Add(order);
                 return true;
             }
@@ -75,6 +84,10 @@ namespace DataAccessLayer
         public Orders GetOrderById(int orderId)
         {
             return orders.FirstOrDefault(o => o.OrderID == orderId);
+        }
+        public List<Orders> GetOrdersByCustomerId(int customerId)
+        {
+            return orders.Where(o => o.CustomerID == customerId).ToList();
         }
     }
 }
